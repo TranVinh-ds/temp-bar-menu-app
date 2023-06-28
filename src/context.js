@@ -14,6 +14,9 @@ export const AppProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('a');
   const [cocktails, setCocktails] = useState([]);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [user, setUser] = useState(null);
 
   const fetchData = useCallback(async () => {
     setIsLoading(true);
@@ -49,7 +52,19 @@ export const AppProvider = ({ children }) => {
     fetchData();
   }, [searchTerm, fetchData]);
   return (
-    <AppContext.Provider value={{ isLoading, cocktails, setSearchTerm }}>
+    <AppContext.Provider
+      value={{
+        isLoading,
+        cocktails,
+        name,
+        email,
+        user,
+        setName,
+        setEmail,
+        setUser,
+        setSearchTerm,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

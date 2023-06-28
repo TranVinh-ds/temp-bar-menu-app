@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useGlobalContext } from '../context';
 import { useRef } from 'react';
 import { toast } from 'react-toastify';
@@ -7,6 +7,9 @@ const SearchForm = () => {
   const { setSearchTerm } = useGlobalContext();
 
   const inputRef = useRef();
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
   const handleSearch = () => {
     const searchValue = inputRef.current.value;
     if (!searchValue) {
