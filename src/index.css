@@ -132,7 +132,7 @@ Navbar
 ======
 */
 .navbar {
-  background: var(--mainWhite);
+  background: linear-gradient(to left, red, yellow, blue, green);
   height: 5rem;
   display: flex;
   align-items: center;
