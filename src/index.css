@@ -411,6 +411,69 @@ Cocktail
     height: 5em;
   }
 }
+/* 
+====== 
+Navbar
+======
+*/
+.bar-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 5rem;
+  background: #222;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.bar-footer p {
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: var(--offWhite);
+  padding: 0.5rem 0;
+  margin-bottom: 0.25rem;
+  letter-spacing: 2px;
+}
+.bar-footer span {
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  color: var(--primaryColor);
+  font-weight: 500;
+}
+.nav-icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 5rem;
+}
+.social-icon {
+  font-size: 1.25rem;
+  color: var(--mainWhite);
+  transition: 0.5s;
+}
+.social-icon:hover {
+  color: var(--primaryDarkColor);
+  transform: translateY(-10px);
+}
+@media screen and (min-width: 678px) {
+  .footer-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    column-gap: 5rem;
+    margin-top: 1rem;
+  }
+  .bar-footer span {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .social-icon {
+    font-size: 1.5rem;
+  }
+}
 
 .Toastify__toast {
   text-transform: capitalize;
