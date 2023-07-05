@@ -489,64 +489,67 @@ Navbar
 Login
 ===========
  */
-.section-login {
-  width: 80vw;
-  max-width: 1120px;
-  margin: 0 auto;
-}
+/* form */
+
 .login-form {
-  max-width: 25rem;
-  min-height: 30vh;
-  box-shadow: var(--darkShadow);
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  place-items: center;
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 2rem 2.5rem;
+  margin: 7rem auto;
+}
+.login-form-label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+.login-form-input,
+.login-form-textarea {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e2e8f0;
 }
 
-.login-form-label {
-  text-transform: capitalize;
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin-right: 0.5rem;
+.login-form-row {
+  margin-bottom: 1rem;
 }
-.login-form-input {
-  height: 2rem;
-  width: 20rem;
-  border-color: transparent;
-  border-radius: var(--mainBorderRadius);
+
+.login-form-textarea {
+  height: 7rem;
+}
+::placeholder {
+  font-family: inherit;
+  color: #94a3b8;
+}
+.login-form-alert {
+  color: var(--red-dark);
+  letter-spacing: var(--letterSpacing);
+  text-transform: capitalize;
 }
 .login-btn {
+  cursor: pointer;
+  color: #fff;
+  background: #10b981;
+  border: transparent;
+  border-radius: 0.25rem;
+  letter-spacing: 1px;
+  padding: 0.375rem 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease-in-out all;
+  text-transform: capitalize;
+  display: inline-block;
+}
+.login-btn:hover {
+  background: #047857;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.login-btn-block {
   width: 100%;
-  padding: 10px;
-  border-color: transparent;
-  background: blueviolet;
-  border-radius: 10px;
-  font-size: 1.5rem;
-  columns: var(--mainGrey);
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: var(--mainSpacing);
-  margin-top: 1.4rem;
-}
-
-.section-login .section-title {
-  margin-top: 4rem;
-}
-
-@media screen and (min-width: 992px) {
-  .login-form {
-    max-width: 30rem;
-    min-height: 40vh;
-    margin-left: 20rem;
-  }
-  .login-form-label {
-    font-size: 1.5rem;
-  }
-  .login-form-input {
-    height: 3rem;
-    width: 25rem;
-  }
-  .login-btn {
-    margin-top: 3rem;
-  }
 }
